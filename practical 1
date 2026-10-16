@@ -1,0 +1,40 @@
+
+class Student {
+    int rollno;
+    String name;
+    int m1, m2, m3;
+
+    Student(int r, String n, int a, int b, int c) {
+        rollno = r;
+        name = n;
+        m1 = a;
+        m2 = b;
+        m3 = c;
+    }
+
+    int totalmarks() {
+        return m1 + m2 + m3;
+    }
+
+    double percentage() {
+        return totalmarks() / 3.0;
+    }
+
+    void display() {
+        System.out.println("Roll No: " + rollno);
+        System.out.println("Name: " + name);
+        System.out.println("Total Marks: " + totalmarks());
+        System.out.println("Percentage: " + percentage() + "%");
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student(1, "tanu", 46, 23, 34);
+        Student s2 = new Student(2, "rupees", 27, 31, 45);
+        Student s3 = new Student(3, "prat", 12, 43, 56);
+
+        s1.display();
+        s2.display();
+        s3.display();
+    }
+}
